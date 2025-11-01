@@ -3,20 +3,23 @@
 Plugin Name: Secure Contact Form
 Description: A simple contact form built with OOP and WordPress security.
 Version: 1.1
-Author: Righteous francis
+Author: Righteous Francis
 */
 
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Prevent direct access
 }
 
+// ✅ Correct path constant: FILE not FILE
 require_once plugin_dir_path(__FILE__) . 'includes/class-secure-contact-form.php';
 
+// ✅ Initialize plugin
 function run_secure_contact_form() {
     $plugin = new Secure_Contact_Form();
 }
-register_activation_hook(__FILE__, 'scf_create_table');
+add_action('plugins_loaded', 'run_secure_contact_form');
 
+// ✅ Create custom table on plugin activation
 function scf_create_table() {
     global $wpdb;
     $table_name = $wpdb->prefix . 'secure_contact_form';
@@ -34,5 +37,4 @@ function scf_create_table() {
     require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
     dbDelta($sql);
 }
-
-add_action('plugins_loaded', 'run_secure_contact_form');
+register_activation_hook(__FILE__, 'scf_create_table');
