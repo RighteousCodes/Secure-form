@@ -24,16 +24,16 @@ Protects against spam and injection using sanitization and WordPress nonces.
 ### Screenshots
 
 1. Frontend Contact Form  
-   ![Frontend Contact Form](assets/screenshots/screenshot-frontend.jpeg)
+   ![Frontend Contact Form](assets/Screenshot-frontend.jpeg)
 
 2. After Submission (Success Message)  
-   ![After Submission](assets/screenshots/screenshot-after-submission.jpeg)
+   ![After Submission](assets/Screenshot-after-submission.jpeg)
 
 3. Backend Settings Page  
-   ![Backend Settings](assets/screenshots/screenshot-backend-settings.jpeg)
+   ![Backend Settings](assets/Screenshot-backend-settings.jpeg)
 
 4. Plugin Active in Dashboard  
-   ![Plugin Active](assets/screenshots/screenshot-plugin-active.jpeg)
+   ![Plugin Active](assets/Screenshot-plugin-active.jpeg)
 
 ---
 
